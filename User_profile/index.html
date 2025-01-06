@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Profile Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="profile-container">
+    <!-- Header Section -->
+    <div class="profile-header">
+	    <div class="header-image-container">
+        <img class="header-image" src="header-images.jpg" alt="Header Image">
+          <div class="profile-info">
+            <div class="profile-picture-container">
+              <img class="profile-picture" src="User-image.png" alt="Profile Picture">
+              <button class="upload-image-btn">Upload image</button>
+            </div>
+            <div class="user-info">
+              <h1 id="username">Dulari Kavindi</h1>
+		          <p id="user-bio">Music lover. Playlist curator. Exploring all genres.</p>
+		          <button id="edit-profile-btn">Edit Profile</button>
+            </div>
+		      </div>
+      </div>
+    </div>
+
+    <!-- Profile Stats -->
+    <div class="profile-stats">
+      <div class="stats-item">
+        <span class="stats-number">0</span>
+        <p class="stats-label">Followers</p>
+      </div>
+      <div class="stats-item">
+        <span class="stats-number">0</span>
+        <p class="stats-label">Following</p>
+      </div>
+      <div class="stats-item">
+        <span class="stats-number">0</span>
+        <p class="stats-label">Tracks</p>
+      </div>
+    </div>
+
+	<div class ="details-part">
+    <!-- Tabs for Music Content -->
+    <div class="tabs">
+      <button class="tab-btn">All</button>
+      <button class="tab-btn">Popular tracks</button>
+      <button class="tab-btn">Tracks</button>
+      <button class="tab-btn">Albums</button>
+      <button class="tab-btn">Playlists</button>
+      <button class="tab-btn">Reposts</button>
+    </div>
+	<div class="profile-details">
+      <h2>Favorite Genres</h2>
+      <ul id="genres-list">
+        <li>Rock</li>
+        <li>Pop</li>
+        <li>Jazz</li>
+      </ul>
+      <h2>Recently Played</h2>
+      <ul id="recently-played">
+        <li>"Bohemian Rhapsody" - Queen</li>
+        <li>"Blinding Lights" - The Weeknd</li>
+        <li>"Take Five" - Dave Brubeck</li>
+      </ul>
+    </div>
+
+    <!-- Upload Button -->
+    <div class="upload-section">
+      <p>Seems a little quiet over here</p>
+      <button class="upload-btn">Upload now</button>
+    </div>
+    <!-- Logout Button -->
+  <button id="logout-btn" class="logout-btn">Logout</button>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
