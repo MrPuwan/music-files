@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- HTML document type -->
+<html lang="en"> <!-- HTML language is English -->
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding is UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design for mobile -->
+    <link rel="stylesheet" href="player.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Link to Font Awesome for icons -->
+    <title>Beat Journey</title> <!-- Webpage title -->
+    <style>
+        body {
+            background-image: url('images/background.jpg'); /* Background image */
+            background-size: cover; /* Image covers the screen */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* No repeat */
+            height: 100vh; /* Full height */
+            margin: 0; /* Remove default margin */
+        }
+    </style> <!-- Inline CSS -->
+</head>
+<body>
+    <div class="container"> <!-- Main container -->
+        <div class="player"> <!-- Music player -->
+            <div class="title-bar"> <!-- Title and artist name -->
+                <h2 id="song-title">No Song Playing</h2> <!-- Default song title -->
+                <h3 id="artist-name">Unknown Artist</h3> <!-- Default artist name -->
+            </div>
+            <div class="album-cover"> <!-- Album cover image -->
+                <img id="album-image" src="images/1.jpg" alt="Album Cover"> <!-- Default image -->
+            </div>
+            <audio id="audio" preload="auto"> <!-- Audio player -->
+                <source id="audioSource" src="music/1.mp3" type="audio/mp3"> <!-- Default audio file -->
+            </audio>
+            <div class="controls"> <!-- Control buttons -->
+                <button id="previous" class="control-btn"><i class="fas fa-step-backward"></i></button> <!-- Previous button -->
+                <button id="play-pause" class="control-btn"><i class="fas fa-play"></i></button> <!-- Play/Pause button -->
+                <button id="next" class="control-btn"><i class="fas fa-step-forward"></i></button> <!-- Next button -->
+                <button id="shuffle" class="control-btn"><i class="fas fa-random"></i></button> <!-- Shuffle button -->
+                <button id="reaction" class="control-btn"><i class="fas fa-heart"></i></button> <!-- Reaction button -->
+            </div>
+            <div class="timeline"> <!-- Progress bar and time display -->
+                <input type="range" id="progress-bar" value="0" step="1" max="100"> <!-- Progress bar -->
+                <span id="current-time">0:00</span> / <span id="duration-time">0:00</span> <!-- Time display -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Reaction Animation Container -->
+    <div id="reaction-animation"></div> <!-- Reaction animation area -->
+    
+    <script src="player.js"></script> <!-- Link to external JS file -->
+</body>
+</html>
