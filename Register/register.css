@@ -1,0 +1,228 @@
+
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; 
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: "Poppins", sans-serif; 
+}
+
+
+body {
+    background: url('backgrond.jpg') no-repeat center center fixed; 
+    background-size: cover; 
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8); 
+    width: 600px; 
+    height: auto; 
+    padding: 1.5rem; 
+    margin: 100px auto; 
+    border-radius: 10px; 
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9); 
+}
+
+form {
+    margin: 0 2rem; 
+}
+
+.form-title {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    text-align: center; 
+    padding: 0.3rem; 
+    margin-bottom: 0.5rem; 
+}
+
+
+.input-group {
+    padding: 1% 0; 
+    position: relative; 
+}
+
+.input-group i {
+    position: absolute; 
+    color: black; 
+}
+
+
+input {
+    color: inherit; 
+    width: 100%;
+    background-color: transparent; 
+    border: none; 
+    border-bottom: 1px solid #757575; 
+    padding-left: 1.5rem; 
+    font-size: 15px; 
+}
+
+input:focus {
+    background-color: transparent; 
+    outline: transparent; 
+    border-bottom: 2px solid hsl(327, 90%, 28%); /* Change bottom border color on focus */
+}
+
+input::placeholder {
+    color: transparent; 
+}
+
+label {
+    color: #757575; 
+    position: relative; 
+    left: 1.5em; 
+    top: -1.3em; 
+    cursor: auto; 
+    transition: 0.3s ease all; 
+}
+
+/* Label focus and non-placeholder styles */
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+    top: -3em;
+    color: hsl(327, 90%, 28%); 
+    font-size: 15px; 
+}
+/* Radio button container styles */
+.input-name {
+    display: flex; 
+    justify-content: flex-start; 
+    margin: -2rem 0; 
+}
+
+
+.input-name .name {
+    display: flex; 
+    align-items: center; 
+}
+
+
+.input-name input[type="radio"] {
+    margin-right: -1rem;
+}
+
+/* Radio button label styles */
+.input-name label {
+    font-size: 1rem; 
+    color: #000; 
+    margin-right: 8rem; 
+    margin-top: 5.5rem;
+}
+
+/* Submit button styles */
+.btn {
+    font-size: 1.1rem; 
+    padding: 8px 0; 
+    border-radius: 5px; 
+    outline: none; 
+    border: none;
+    width: 100%; 
+    background: rgb(125, 125, 235); 
+    color: white; 
+    cursor: pointer; 
+    transition: 0.9s; 
+}
+
+.btn:hover {
+    background: #07001f; 
+}
+
+.or {
+    font-size: 1rem; 
+    margin-top: 0.6rem;
+    text-align: center; 
+}
+
+
+.icons {
+    text-align: center; 
+}
+
+.icons i {
+    color: rgb(125, 125, 235); 
+    padding: 0.5rem 1rem; 
+    border-radius: 10px;
+    font-size: 1.5rem; 
+    cursor: pointer; 
+    border: 2px solid #dfe9f5; 
+    margin: 0 10px;
+    transition: 1s; 
+}
+
+.icons i:hover {
+    background: #07001f; 
+    font-size: 1.6rem; 
+    border: 2px solid rgb(125, 125, 235); 
+}
+
+.links {
+    display: flex; 
+    justify-content: space-around; 
+    padding: 0 4rem; 
+    margin-top: 0.9rem; 
+    font-weight: bold; 
+}
+
+button {
+    color: rgb(125, 125, 235); 
+    border: none; 
+    background-color: transparent; 
+    font-size: 1rem; 
+    font-weight: bold; 
+}
+
+
+button:hover {
+    text-decoration: underline; 
+    color: blue; 
+}
+
+/* Responsive styles for medium screens */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; 
+        margin: 50px auto; 
+    }
+    .form-title {
+        font-size: 1.2rem; 
+    }
+    .input-group {
+        padding: 2% 0; 
+    }
+    .input-name {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+    .input-name label {
+        margin-bottom: 0.5rem; 
+    }
+}
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%; 
+        margin: 20px auto; 
+        padding: 1rem; 
+    }
+    .form-title {
+        font-size: 1rem; 
+    }
+    .input-group {
+        padding: 3% 0;
+    }
+    .input-name {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+    .input-name label {
+        margin-bottom: 0.5rem; 
+    }
+    .links {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 0; 
+    }
+    .links p {
+        margin-bottom: 0.5rem; 
+    }
+}
